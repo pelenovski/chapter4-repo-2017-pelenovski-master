@@ -12,18 +12,32 @@ public class Circuit
 {
     private boolean lamp, switch1, switch2;
 
-    public int getLampState()
+    public int getLampState(boolean switch1, boolean switch2, boolean lamp)
     {
-        if (switch1 == true)
-        
+        if (switch1 == true) && (switch2 == true)
+        {
+            lamp = true;
+        }
+        else if (switch1 == false) && (switch2 == false)
+        {
+            lamp = true;
+        }
+        else if (switch1 != switch2)
+        {
+            lamp = false;
+        }
+        else if (switch2 != switch1)
+        {
+            lamp = false;
+        }
     }
 
-    public boolean getFirstSwitchState()
+    public boolean getFirstSwitchState(boolean switch1)
     {
         return switch1;
     }
     
-    public boolean getSecondSwitchState()
+    public boolean getSecondSwitchState(boolean switch2)
     {
         return switch2;
     }
