@@ -21,7 +21,8 @@ public class CircuitClient
         int choice1;
         choice = keyboard.next();
         
-        if (choice == "y")
+        
+        while (choice == "y")
         {
             System.out.print("Which switch would you like to toggle? (1 or 2) ");
             choice1 = keyboard.nextInt();
@@ -38,6 +39,8 @@ public class CircuitClient
             System.out.print("\nWould you like to toggle another switch? (y or n) ");
             choice = keyboard.next();
         }
-        System.out.println(line);
+
+        System.out.print(line);
+        
     }
 }
