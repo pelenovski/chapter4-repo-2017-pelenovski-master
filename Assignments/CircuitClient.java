@@ -3,40 +3,41 @@ package Assignments;
 
 
 /**
- * Write a description of class CircuitClient here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+Pane Elenovski
+12/5/2017
+Circuit Client
+Client used to perform actions with Circuit program
  */
+import java.util.Scanner;
 public class CircuitClient
 {
-    /** description of instance variable x (add comment for each instance variable) */
-    private int x;
 
-    /**
-     * Default constructor for objects of class CircuitClient
-     */
-    public CircuitClient()
+    public static void main(String[] args)
     {
-        // initialise instance variables
-        x = 0;
+        Circuit line = new Circuit(true,false);
+        Scanner keyboard = new Scanner(System.in);
+        System.out.print("Would you like to alter any switches state? (y or n) ");
+        String choice;
+        int choice1;
+        choice = keyboard.next();
+        
+        if (choice == "y")
+        {
+            System.out.print("Which switch would you like to toggle? (1 or 2) ");
+            choice1 = keyboard.nextInt();
+            if (choice1 == 1)
+            {
+                line.toggleFirstSwitch();
+            }
+            else if (choice1 == 2)
+            {
+                line.toggleSecondSwitch();
+            }
+            line.getLampState();
+            System.out.print(line);
+            System.out.print("\nWould you like to toggle another switch? (y or n) ");
+            choice = keyboard.next();
+        }
+        System.out.println(line);
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
-     *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x+y;
-    }
-
 }

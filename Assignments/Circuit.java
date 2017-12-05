@@ -11,25 +11,32 @@ Tests a lap by turning two switches on and off
 public class Circuit
 {
     private boolean lamp, switch1, switch2;
-
-    public int getLampState(boolean switch1, boolean switch2, boolean lamp)
+    
+    public Circuit(boolean switch_1, boolean switch_2)
     {
-        if (switch1 == true) && (switch2 == true)
+        switch1 = switch_1;
+        switch2 = switch_2;
+    }
+    
+    public boolean getLampState()
+    {
+        if ((switch1 == true) && (switch2 == true))
         {
             lamp = true;
         }
-        else if (switch1 == false) && (switch2 == false)
+        else if ((switch1 == false) && (switch2 == false))
         {
             lamp = true;
         }
-        else if (switch1 != switch2)
+        else if ((switch1 != switch2))
         {
             lamp = false;
         }
-        else if (switch2 != switch1)
+        else if ((switch2 != switch1))
         {
             lamp = false;
         }
+        return lamp;
     }
 
     public boolean getFirstSwitchState(boolean switch1)
@@ -57,11 +64,11 @@ public class Circuit
         else if (switch2 == false)
             switch2 = true;
     }
-    public string toString()
+    public String toString()
     {
         String result;
         
-        result += "Lamp state: " + lamp + "\n";
+        result = "Lamp state: " + lamp + "\n";
         result += "Switch 1 State: " + switch1 + "\n";
         result += "Switch 2 State: " + switch2 + "\n";
         return result;

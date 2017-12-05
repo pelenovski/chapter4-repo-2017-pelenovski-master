@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=switch_1\ switch_2
+comment0.target=Circuit(boolean,\ boolean)
+comment1.params=
+comment1.target=boolean\ getLampState()
+comment2.params=switch1
+comment2.target=boolean\ getFirstSwitchState(boolean)
+comment3.params=switch2
+comment3.target=boolean\ getSecondSwitchState(boolean)
+comment4.params=
+comment4.target=void\ toggleFirstSwitch()
+comment5.params=
+comment5.target=void\ toggleSecondSwitch()
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7
