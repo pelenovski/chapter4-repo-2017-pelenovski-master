@@ -24,8 +24,21 @@ public class Address
       state = st;
       zipCode = zip;
    }
-
-
+   
+   public Address(Address obj)
+   {
+       //this = obj;
+       this.streetAddress = obj.streetAddress;
+       this.city = obj.city;
+       this.state = obj.state;
+       this.zipCode = obj.zipCode;
+   }
+   
+   public void setState(String state)
+   {
+       this.state = state;
+       
+   }
 
 
 

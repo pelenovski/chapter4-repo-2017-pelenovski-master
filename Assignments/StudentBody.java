@@ -16,8 +16,9 @@ public class StudentBody
       Address school = new Address ("800 Lancaster Ave.", "Villanova",
                                     "PA", 19085);
 
-      Address jHome = new Address ("21 Jump Street", "Lynchburg",
-                                   "VA", 24551);
+      Address jHome = new Address ("21 Jump Street", "Lynchburg","VA", 24551);
+      
+      Address jbrotherHome = new Address(jHome);
       Student john = new Student ("John", "Gomez", jHome, school);
       Student jon = new Student ("John", "Gomez", jHome, school, 81, 23, 47);
 

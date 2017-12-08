@@ -99,5 +99,6 @@ public class Student
       result += "Score 3: " + score3 + "\n";
 
       return result;
+      
    }
 }
